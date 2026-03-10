@@ -1,6 +1,13 @@
-﻿namespace EventApi.Interfaces
+﻿using EventApi.Models;
+
+namespace EventApi.Interfaces
 {
-    public class IEventService
+    public interface IEventService
     {
+        Event GetById(int id);
+        IEnumerable<Event> GetAll();
+        Event CreateEvent(Event items);
+        bool Update(int id, Event items);
+        bool Delete(int id);
     }
 }
